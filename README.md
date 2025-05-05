@@ -15,8 +15,8 @@ This project was developed for the **FP20 Analytics Challenge 25**, hosted by [Z
 
 ## 📁 Project Highlights
 
-- Cleaned and transformed raw inventory data using SQL. View SQL files here: main/Data_cleaning_and_exploration.sql
-- Built relationships and KPIs in Power BI, using DAX query to verify logic and accuracy. View DAX queries here: main/DAX-query.txt
+- Cleaned and transformed raw inventory data using SQL. View SQL files here: Inventory-Management-Interactive-Dashboard/Data_cleaning_and_exploration.sql
+- Built relationships and KPIs in Power BI, using DAX query to verify logic and accuracy. View DAX queries here: Inventory-Management-Interactive-Dashboard/DAX-query.txt
 - Designed a 3-page interactive dashboard showing:
   - Stock overview
   - Supplier performance & restocking analysis
