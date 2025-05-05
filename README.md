@@ -30,7 +30,7 @@ This project was developed for my participation in the **FP20 Analytics Challeng
 **1. Stock Overview**
 - 5,000 products | 2.5M units | €1.25B in stock value
 - 40% at mid stock level, 30% at low stock level
-- Top categories: Home & Garden, Books, Office Supplies
+- Top categories with high stock: Home & Garden, Books, Office Supplies
 
 **2. Product-Level Insights**
 - Highest stock value products: Product_1444, 4211, 3988
@@ -38,7 +38,7 @@ This project was developed for my participation in the **FP20 Analytics Challeng
 
 **3. Supplier & Restocking**
 - Avg lead time: 15 days | Max: 17.3 days
-- 262 items below reorder point → 7,102 MOQ needed
+- 262 items below reorder point & at least 7,102 min order quantity needed
 - Turnover rate up to 987 — highlights fast-moving SKUs
 
 **4. Warehouse Location Analysis**
