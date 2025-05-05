@@ -1,4 +1,4 @@
-# 📦 FP20 Analytics Challenge 25 – Inventory Management Dashboard
+# 📦 Inventory Management Dashboard
 
 This project was developed for the **FP20 Analytics Challenge 25**, hosted by [ZoomCharts](https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/challenges/fp20-analytics-april-2025). It presents an interactive inventory management dashboard built in **Power BI**, with all data handled and transformed using **PostgreSQL**, **SQL**, and **DAX**.
 
