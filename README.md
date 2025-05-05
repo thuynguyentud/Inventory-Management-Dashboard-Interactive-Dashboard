@@ -78,4 +78,7 @@ A multi-page dashboard showing stock levels, supplier lead times, reorder analys
 ![Final Power BI Dashboard2](images/PBI2.png)
 ![Final Power BI Dashboard3](images/PBI2.png)
 
+## 🔚 Final Note
+This project represents my ongoing journey in data visualization and business intelligence. While it captures key insights using interactive dashboards, I recognize there’s always more room to refine the story, improve data modeling, and enhance usability. This is a growing portfolio, and I intend to revisit and enhance it as I learn more about DAX, data modeling best practices, and real-world reporting needs.
 
+Thank you for viewing this project!
