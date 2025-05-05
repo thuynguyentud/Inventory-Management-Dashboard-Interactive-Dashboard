@@ -1,0 +1,68 @@
+ //Check Total Stock Quantity per Category
+EVALUATE
+SUMMARIZECOLUMNS(
+    Inventory[Category],
+    "Average Lead Time", AVERAGE(Inventory[Lead_Time_Days]))
+
+// Show total stock and total stock value per product category
+EVALUATE
+ADDCOLUMNS(
+    SUMMARIZE(Inventory, Inventory[Category]),
+    "Total Stock Quantity", SUM(Inventory[Stock_Quantity]),
+    "Total Stock Value", SUMX(
+        Inventory, 
+        Inventory[Unit_Price] * Inventory[Stock_Quantity]
+    )
+)
+
+//Check Average Lead Time by Supplier
+EVALUATE
+SUMMARIZECOLUMNS(
+    Inventory[Supplier_ID],
+    "Avg Lead Time", AVERAGE(Inventory[Lead_Time_Days])
+)
+
+//Check Total Stock Value by Country
+EVALUATE
+ADDCOLUMNS(
+    SUMMARIZE(Inventory, Inventory[Country]),
+    "Total Stock Value", 
+    SUMX(Inventory, Inventory[Unit_Price] * Inventory[Stock_Quantity])
+)
+
+//Check Products Below Reorder Point
+EVALUATE
+FILTER(
+    Inventory,
+    Inventory[Stock_Quantity] <= Inventory[Reorder_Point]
+)
+
+//Check Minimum Order Quantity Needed by Warehouse
+EVALUATE
+SUMMARIZECOLUMNS(
+    Inventory[Warehouse_Location],
+    "Total MOQ to Reorder", 
+    SUMX(
+        FILTER(Inventory, Inventory[Stock_Quantity] <= Inventory[Reorder_Point]),
+        Inventory[Min_Order_Quantity]
+    )
+)
+
+//Check Average Inventory Turnover per Category
+EVALUATE
+ADDCOLUMNS(
+    SUMMARIZE(Inventory, Inventory[Category]),
+    "Avg Turnover", 
+    AVERAGEX(
+        Inventory,
+        DIVIDE(Inventory[Stock_Quantity], Inventory[Lead_Time_Days])
+    )
+)
+
+//Check Average Unit Price by Category and Supplier
+EVALUATE
+SUMMARIZECOLUMNS(
+    Inventory[Category],
+    Inventory[Supplier_ID],
+    "Avg Unit Price", AVERAGE(Inventory[Unit_Price])
+)
