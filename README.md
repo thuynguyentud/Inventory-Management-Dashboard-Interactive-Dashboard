@@ -9,15 +9,15 @@ This project was developed for the **FP20 Analytics Challenge 25**, hosted by [Z
 - **PostgreSQL** – Database creation and management
 - **SQL** – Data cleaning, exploration, and aggregation
 - **Power BI Desktop** – Visual dashboard design
-- **DAX Queries** – Custom KPIs, calculated columns, and business logic
+- **DAX Queries** – Custom KPIs, calculated columns, and business logic verification.
 
 ---
 
 ## 📁 Project Highlights
 
-- Cleaned and transformed raw inventory data using SQL. View SQL files here: 
-- Built relationships and KPIs in Power BI, using DAX query to verify logic and correctness. View DAX queries here: 
- Designed a 3-page interactive dashboard showing:
+- Cleaned and transformed raw inventory data using SQL. View SQL files here: main/Data_cleaning_and_exploration.sql
+- Built relationships and KPIs in Power BI, using DAX query to verify logic and accuracy. View DAX queries here: main/DAX-query.txt
+- Designed a 3-page interactive dashboard showing:
   - Stock overview
   - Supplier performance & restocking analysis
   - Warehouse location insights
@@ -29,7 +29,7 @@ This project was developed for the **FP20 Analytics Challenge 25**, hosted by [Z
 
 **1. Stock Overview**
 - 5,000 products | 2.5M units | €1.25B in stock value
-- 40% at mid stock level, 30% low stock
+- 40% at mid stock level, 30% at low stock level
 - Top categories: Home & Garden, Books, Office Supplies
 
 **2. Product-Level Insights**
@@ -43,24 +43,39 @@ This project was developed for the **FP20 Analytics Challenge 25**, hosted by [Z
 
 **4. Warehouse Location Analysis**
 - 989 warehouses across 10 countries
-- Germany, Spain, Belgium lead in stock volume
+- Germany, Spain, and Belgium lead in stock volume
 - Top high-density shelves > 8K units | Lowest < 200 units
 
 ---
-### 🔄 Importing Data into PostgreSQL
-Here’s how I used pgAdmin to import and prepare the dataset.
+## 🖼️ Project Screenshots & Workflow Overview
+### 🔹 1. Writing SQL Queries in pgAdmin 4
 
-![Importing data in pgAdmin](images/data_import_pgadmin.png)
+Used pgAdmin to write queries for creating tables, cleaning the data, and running initial analysis.
+
+![SQL Query in pgAdmin 4](images/SQL.png)
+---
+
+### 🔹 2. Importing Data from PostgreSQL to Power BI
+
+Connected Power BI to the PostgreSQL server and imported the cleaned dataset for modeling and visualization.
+
+![Import to Power BI](images/Import.png)
+---
+
+### 🔹 3. DAX Queries & Measures
+
+Used DAX to verify the logic and accuracy of some measures
+
+![DAX Measure Editor](images/DAX.png)  
 
 ---
 
-### 🧮 Creating DAX Measures in Power BI
-Used DAX to build custom KPIs for turnover, MOQ, lead time, and stock value.
+### 🔹 4. Final Power BI Dashboard
 
-![DAX Editor](images/powerbi_dax_editor.png)
+A multi-page dashboard showing stock levels, supplier lead times, reorder analysis, and warehouse performance.
 
----
+![Final Power BI Dashboard1](images/PBI1.png)
+![Final Power BI Dashboard2](images/PBI2.png)
+![Final Power BI Dashboard3](images/PBI2.png)
 
-### 📊 Final Power BI Dashboard (Overview Page)
 
-![Dashboard Overview](images/dashboard_overview.png)
